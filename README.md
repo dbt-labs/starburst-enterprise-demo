@@ -1,5 +1,13 @@
 # dbt + Trino: Starburst Galaxy covid demo
 
+## What's this demo about
+
+- AWS COVID-19 data lake
+- Snowflake public COVID19 database
+- TPC-H standard datasets
+
+Why are we using so many data sources? Well, for this data lakehouse tutorial we will take you through all the steps of creating a reporting structure, which includes gathering your sources into your land layer in S3. Since dbt specializes as a transform tool and can only be utilized after the data is in one storage solution, Starburst Galaxy’s superpower with dbt is being able to federate data from multiple different sources into one dbt repository.
+
 ## Initial Intrastructure Work
 
 Inspired by the [Cinco de Trino](https://github.com/dbt-labs/trino-dbt-tpch-demo) repo by [@jtcohen6](https://github.com/jtcohen6)!
