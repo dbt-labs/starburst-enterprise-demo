@@ -27,6 +27,8 @@ models:
   dbt_galaxy_covid_demo:
     +materialized: table
     +on_table_exists: drop
+    aggregates:
+      +enabled: false
 
 # override some 'dbt_utils' macros with Trino-SQL versions
 # so that the 'date_spine' macro can work on Trino
