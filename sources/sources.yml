@@ -1,6 +1,117 @@
 version: 2
 
 sources:
+  - name: burst_bank # or burst_bank_large
+    database: glue #or so many others
+    tables:
+      - name: account
+        columns:
+          - name: custkey
+          - name: acctkey
+          - name: products
+          - name: cc_number
+          - name: cc_open_date
+          - name: cc_closed_date
+          - name: cc_balance
+          - name: cc_status
+          - name: cc_default
+          - name: mortgage_id
+          - name: mortgage_open_date
+          - name: mortgage_closed_date
+          - name: mortgage_balance
+          - name: mortgage_status
+          - name: mortgage_default
+          - name: auto_loan_id
+          - name: auto_loan_open_date
+          - name: auto_loan_closed_date
+          - name: auto_loan_balance
+          - name: auto_loan_status
+          - name: auto_loan_default
+
+      - name: auto_loan_payment
+        columns:
+          - name: auto_loan_id
+          - name: payment_date
+          - name: payment_amount
+          - name: payment_due_date
+          - name: delinquent_payment
+          - name: balance
+
+      - name: credit_card_payment
+        columns:
+          - name: cc_number
+          - name: payment_date
+          - name: payment_amount
+          - name: payment_due_date
+          - name: delinquent_payment
+          - name: balance
+
+      - name: customer
+        columns:
+          - name: custkey
+          - name: first_name
+          - name: last_name
+          - name: street
+          - name: city
+          - name: state
+          - name: postcode
+          - name: country
+          - name: phone
+          - name: dob
+          - name: gender
+          - name: married
+          - name: ssn
+          - name: paycheck_dd
+          - name: estimated_income
+          - name: fico
+          - name: registration_date
+
+      - name: customer_profile
+        columns:
+          - name: profilekey
+          - name: custkey
+          - name: career
+          - name: professional_status
+          - name: risk_appetite
+          - name: customer_segment
+
+      - name: mortgage_payment
+        columns:
+          - name: mortgage_id
+          - name: payment_date
+          - name: payment_amount
+          - name: payment_due_date
+          - name: delinquent_payment
+          - name: balance
+
+      - name: product_profile
+        columns:
+          - name: profilekey
+          - name: custkey
+          - name: cc_type
+          - name: cc_rate
+          - name: mortgage_officer
+          - name: mortgage_duration
+          - name: mortgage_residence_type
+          - name: mortgage_purchase_price
+          - name: mortgage_rate
+          - name: auto_loan_officer
+          - name: auto_loan_duration
+          - name: vehicle_type
+          - name: auto_purchase_price
+          - name: auto_loan_rate
+
+      - name: state_census
+        columns:
+          - name: sumlev
+          - name: region
+          - name: division
+          - name: state
+          - name: name
+          - name: abbreviation
+          - name: popestimate2019
+          - name: popest18plus2019
+          - name: pcnt_popest18plus
   - name: aws
     description: Sample covid data
     loader: sample
