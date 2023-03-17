@@ -22,10 +22,13 @@ clean-targets:         # directories to be removed by `dbt clean`
     - "dbt_modules"
     - "logs"
 
+vars:
+  schema_with_write_permission: dbt_partner
+
 # configure all the models in my project
 models:
   dbt_galaxy_covid_demo:
-    +materialized: table
+    +materialized: view
     +on_table_exists: drop
     aggregates:
       +enabled: false
