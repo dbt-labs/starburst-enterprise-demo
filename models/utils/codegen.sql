@@ -6,3 +6,5 @@
     generate_columns=true,
     include_data_types=true
     ) }} #}
+
+SELECT 1 as placeholder
