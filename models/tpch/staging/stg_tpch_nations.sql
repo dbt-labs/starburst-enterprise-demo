@@ -15,7 +15,7 @@ renamed as (
 
     from source
     
-    union all (
+    {# union all (
     
     -- make sure to test for dupes!!!
     select
@@ -29,7 +29,7 @@ renamed as (
     
     limit 1
   
-  )
+  ) #}
 
 )
 
